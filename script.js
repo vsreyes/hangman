@@ -7,7 +7,7 @@ const finalMessage = document.getElementById('final-message');
 
 const figureParts = document.querySelectorAll('.figure-part');
 
-const words = ['programming', 'championship', 'communication', 'dna', 'emergency', 'freedom', 'intenational', 'powder', 'rifle', 'bazooka', 'shinkansen'];
+const words = ['programming', 'championship', 'communication', 'dna', 'emergency', 'freedom', 'hospital', 'international', 'powder', 'rifle', 'bazooka', 'shinkansen'];
 
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
