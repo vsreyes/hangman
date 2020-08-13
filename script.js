@@ -7,7 +7,7 @@ const finalMessage = document.getElementById('final-message');
 
 const figureParts = document.querySelectorAll('.figure-part');
 
-const words = ['application', 'programming', 'interface', 'wizard'];
+const words = ['programming', 'championship', 'communication', 'dna', 'emergency', 'freedom', 'intenational', 'powder', 'rifle', 'bazooka', 'shinkansen'];
 
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
@@ -19,16 +19,16 @@ function displayWord() {
     wordEl.innerHTML = `
         ${selectedWord
             .split('')
-            .map
-                (letter => `
+            .map(
+                letter => `
                     <span class="letter">
                         ${correctLetters.includes(letter) ? letter : ''}
                     </span>
                 `
-            ).
-            join('')}
-        `;
-
+            )
+            .join('')}
+    `;
+     
     const innerWord = wordEl.innerText.replace(/\n/g, '');
 
     if (innerWord === selectedWord) {
@@ -42,7 +42,7 @@ function updateWrongLettersEl() {
     // Display wrong letters
     wrongLettersEl.innerHTML = `
         ${wrongLetters.length > 0 ? '<p>Wrong</p>' : ''}
-        ${wrongLetters.map(Letter => `<span>${letter}</span>`)}
+        ${wrongLetters.map(letter => `<span>${letter}</span>`)}
     `;
 
     // Display parts
@@ -85,7 +85,7 @@ window.addEventListener('keydown', e => {
                 displayWord();
             } else {
                 showNotification();
-            }
+                }
             } else {
                 if (!wrongLetters.includes(letter)) {
                     wrongLetters.push(letter);
