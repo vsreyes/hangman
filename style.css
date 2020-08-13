@@ -30,7 +30,7 @@ h1 {
     fill: transparent;
     stroke: #fff;
     stroke-width: 4px;
-    stroke-width: round;
+    stroke-linecap: round;
 }
 
 .figure-part {
